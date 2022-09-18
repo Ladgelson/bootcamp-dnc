@@ -1,21 +1,26 @@
+:root {
+    --blue: #0C70F2;
+    --black: #303030;
+}
+
 body {
     height: 100%;
-    background-color: #303030;
+    background-color: var(--black);
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    background-color:  #0C70F2;
+    background: linear-gradient(to bottom, var(--blue) ,var(--black) 35%);
 }
 
 strong {
     padding: 5px 10px;
-    background-color: #303030;
+    background-color: var(--black);
     border-radius: 5px;
 }
 
 button {
-    background-color: #0C70F2;
-    border-color: #0C70F2;
+    background-color: var(--blue);
+    border-color: var(--blue);
     border-radius: 5px;
     color: white;
     font-weight: bold;
@@ -24,8 +29,9 @@ button {
 
 header {
     display: flex;
-    background-color: #303030;
+    background-color: var(--black);
     padding: 10px 10px;
+    height: 50px;
 }
 
 header div {
@@ -33,7 +39,7 @@ header div {
 }
 
 header div:hover {
-    color: #0C70F2;
+    color: var(--blue);
 }
 
 header button {
@@ -69,4 +75,126 @@ main .subtitle {
     padding-right: 15%;
     padding-left: 15%;
     margin-bottom: 4rem;
+}
+
+.cadastro {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+}
+
+.cadastro form {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    margin: 40px;
+}
+
+.cadastro form input {
+    height: 30px;
+    margin-bottom: 12px;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 15px;
+}
+
+form label {
+    
+    margin-bottom: 8px;
+}
+
+form .interesses {
+    display: flex;
+}
+
+form .interesses label {
+    margin-top: 9px;
+    margin-right: 10px;
+}
+
+form .interesses input {
+    height: 15px;
+    margin-left: 0px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: var(--blue);
+}
+
+footer div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+footer div section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer section {
+    width: 30%;
+}
+
+footer div section a {
+    padding: 5px 11px;
+}
+
+footer p {
+    text-align: center;
+    font-size: 14px;
+}
+
+footer span {
+    width: 30%;
+    font-weight: bold;
+    padding: 5px 10px;
+    background-color: var(--black);
+    border-radius: 5px;
+}
+
+@media only screen and (max-width: 1300px) {
+    img {
+        display: none;
+    }
+
+    main h1 {
+        font-size: 3rem;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    form {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    header div {
+        display: none;
+    }
+
+    .main h1 {
+        font-size: 3rem;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .interesses {
+        flex-direction: column;
+    }
+
+    footer div {
+        flex-direction: column;
+    }
+
+    footer div section {
+        width: 80%;
+        margin-bottom: 30px;
+    }
 }
